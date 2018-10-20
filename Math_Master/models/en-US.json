@@ -56,6 +56,7 @@
             }
           ],
           "samples": [
+            "{Number_Answer}",
             "{StateName}",
             "{Capital}",
             "{StatehoodYear}",

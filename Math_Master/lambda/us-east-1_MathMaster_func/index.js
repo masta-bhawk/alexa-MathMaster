@@ -671,6 +671,7 @@ exports.handler = skillBuilder
     MathQuizHandler,
     DefinitionHandler,
     QuizAnswerHandler,
+    MathQuizAnswerHandler,
     RepeatHandler,
     HelpHandler,
     ExitHandler,
