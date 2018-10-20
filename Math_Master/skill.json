@@ -1,0 +1,20 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Math Master"
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": ".\\lambda\\us-east-1_MathMaster_func"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

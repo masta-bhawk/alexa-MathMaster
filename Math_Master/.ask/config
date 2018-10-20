@@ -1,0 +1,40 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.742be964-9eca-4ed9-8454-5c90bcc7ad57",
+      "was_cloned": true,
+      "resources": {
+        "manifest": {
+          "eTag": "ef19b63bbe73d770c7e74fd4248b6092"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "2eadadd297f122e965efd8f6c3f49961"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:983662908997:function:MathMaster_func",
+            "awsRegion": "us-east-1",
+            "functionName": "MathMaster_func",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "add01782-c74a-4139-9f13-4155d3562355"
+          }
+        ]
+      },
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-east-1:983662908997:function:MathMaster_func"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
