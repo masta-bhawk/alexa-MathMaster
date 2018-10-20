@@ -67,7 +67,7 @@ sts.assumeRole({
             return originalRequire.apply(this, arguments);
           }
         };        
-        var lambda = require('../src/index.js');
+        var lambda = require('../us-east-1_MathMaster_func/index.js');
         var event = require('./input.json');
         lambda.handler(event, context());
     }

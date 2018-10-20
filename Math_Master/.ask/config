@@ -16,11 +16,11 @@
           {
             "arn": "arn:aws:lambda:us-east-1:983662908997:function:MathMaster_func",
             "awsRegion": "us-east-1",
-            "functionName": "MathMaster_func",
+            "functionName": "arn:aws:lambda:us-east-1:983662908997:function:MathMaster_func",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "add01782-c74a-4139-9f13-4155d3562355"
+            "revisionId": "63adc78b-bb29-4770-87d2-d66db5404c5d"
           }
         ]
       },

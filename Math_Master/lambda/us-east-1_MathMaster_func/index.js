@@ -31,11 +31,12 @@ const MathQuizHandler = {
     },
     handle(handlerInput) {
         console.log("Inside MathQuizHandler - handle");
-        const attributes = handlerInput.att.getSessionAttributes();
+        const attributes = handlerInput.attributesManager.getSessionAttributes();
         const response = handlerInput.responseBuilder;
         attributes.counter = 0;
         attributes.quizScore = 0;
-
+        attributes.state = states.MATHQUIZ;
+    
         var question = getMathQuestion(handlerInput);
         var speakOutput = startMathQuizMessage + question;
         var repromptOutput = question;
@@ -76,10 +77,12 @@ function getMathQuestion(handlerInput) {
     attributes.answer = ans;
     attributes.counter += 1;
   
+    const question = "Problem number " + attributes.counter + ".  What is " + num1 + " " + speech_plusminus + " " + num2 + "?";
+  
+    attributes.question = question;
     //SAVE ATTRIBUTES
     handlerInput.attributesManager.setSessionAttributes(attributes);
   
-    const question = "Problem number " + counter + ".  What is " + num1 + " " + speech_plusminus + " " + num2 + "?";
     return question;
   }
   
@@ -189,6 +192,30 @@ const DefinitionHandler = {
   }
 };
 
+const MathQuizAnswerHandler = {
+  canHandle(handlerInput) {
+    console.log("Inisde MathQuizAnswerHandler");
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    const request = handlerInput.requestEnveleope.request;
+
+    return attributes.state === states.MATHQUIZ &&
+      request.type === 'IntentRequest' &&
+      request.intent.name === 'AnswerIntent';
+  },
+  handle(handlerInput) {
+    console.log("Inside MathQuizAnswerHandler - handle");
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    const response = handlerInput.responseBuilder;
+
+    var speakOutput = `whatever`;
+    var repromptOutput = ``;
+
+    var mathquestion = attributes.question;
+    var answerGiven = handlerInput.requestEnvelope.request.intent.slots.Number_Answer.value;
+
+    return response.speak(speakOutput).getResponse();
+  }
+}
 const QuizAnswerHandler = {
   canHandle(handlerInput) {
     console.log("Inside QuizAnswerHandler");
