@@ -212,6 +212,12 @@ const MathQuizAnswerHandler = {
 
     var mathquestion = attributes.question;
     var answerGiven = handlerInput.requestEnvelope.request.intent.slots.Number_Answer.value;
+    if (answerGiven == attributes.answer) {
+      speakOutput = 'Correct!';
+    }
+    else {
+      speakOutput = 'Sorry - the correct answer was ' + attributes.answer.toString();
+    }
 
     return response.speak(speakOutput).getResponse();
   }
