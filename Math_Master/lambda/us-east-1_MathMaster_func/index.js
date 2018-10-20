@@ -196,11 +196,11 @@ const MathQuizAnswerHandler = {
   canHandle(handlerInput) {
     console.log("Inisde MathQuizAnswerHandler");
     const attributes = handlerInput.attributesManager.getSessionAttributes();
-    const request = handlerInput.requestEnveleope.request;
+    const request = handlerInput.requestEnvelope.request;
 
     return attributes.state === states.MATHQUIZ &&
       request.type === 'IntentRequest' &&
-      request.intent.name === 'AnswerIntent';
+      request.intent.name === 'MathAnswerIntent';
   },
   handle(handlerInput) {
     console.log("Inside MathQuizAnswerHandler - handle");

@@ -1,0 +1,40 @@
+{
+    "session": {
+      "sessionId": "SessionId.Session1",
+      "application": {
+        "applicationId": "amzn1.ask.skill.742be964-9eca-4ed9-8454-5c90bcc7ad57"
+      },
+      "attributes": {
+        "quizScore": 0,
+        "plusminus": 0,
+        "plusminus_speech": "plus",
+        "answer": 199,
+        "question": "Problem number 1.  What is 172 plus 27?",
+        "num1": 172,
+        "counter": 1,
+        "num2": 27
+      },
+      "user": {
+        "userId": "arn:aws:iam::983662908997:user/debugUser"
+      },
+      "new": true
+    },
+    "request": {
+      "type": "IntentRequest",
+      "requestId": "EdwRequestId.TestSession1",
+      "timestamp": "2016-05-19T01:07:55Z",
+      "intent": {
+        "name": "MathAnswerIntent",
+        "slots": {
+          "Number_Answer": {
+            "name": "Number_Answer",
+            "value": "216",
+            "confirmationStatus": "NONE",
+            "source": "USER"
+          }
+        }
+      },
+      "locale": "en-US"
+    },
+    "version": "1.0"
+  }

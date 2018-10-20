@@ -2,14 +2,14 @@
   "deploy_settings": {
     "default": {
       "skill_id": "amzn1.ask.skill.742be964-9eca-4ed9-8454-5c90bcc7ad57",
-      "was_cloned": true,
+      "was_cloned": false,
       "resources": {
         "manifest": {
           "eTag": "ef19b63bbe73d770c7e74fd4248b6092"
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "2eadadd297f122e965efd8f6c3f49961"
+            "eTag": "69079224f5a397dfbe8b5d52b5feb3d5"
           }
         },
         "lambda": [
@@ -20,7 +20,7 @@
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "3543446b-0e61-42df-a30c-a795c9787ceb"
+            "revisionId": "87af3809-308a-4214-bef7-07c570d3b350"
           }
         ]
       },

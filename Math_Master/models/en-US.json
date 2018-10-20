@@ -28,57 +28,17 @@
           "samples": []
         },
         {
-          "name": "AnswerIntent",
+          "name": "MathAnswerIntent",
           "slots": [
-            {
-              "name": "StateName",
-              "type": "AMAZON.US_STATE"
-            },
-            {
-              "name": "Capital",
-              "type": "AMAZON.US_CITY"
-            },
-            {
-              "name": "StatehoodYear",
-              "type": "AMAZON.FOUR_DIGIT_NUMBER"
-            },
-            {
-              "name": "Abbreviation",
-              "type": "US_STATE_ABBR"
-            },
-            {
-              "name": "StatehoodOrder",
-              "type": "AMAZON.NUMBER"
-            },
             {
               "name": "Number_Answer",
               "type": "AMAZON.NUMBER"
             }
           ],
           "samples": [
-            "{Number_Answer}",
-            "{StateName}",
-            "{Capital}",
-            "{StatehoodYear}",
-            "{StatehoodOrder}",
-            "{Abbreviation}",
-            "tell me about {StateName}",
-            "tell me about {Capital}",
-            "tell me about {StatehoodYear}",
-            "tell me about {StatehoodOrder}",
-            "tell me about {Abbreviation}",
-            "what do you know about {StateName}",
-            "what do you know about {Capital}",
-            "what do you know about {StatehoodYear}",
-            "what do you know about {StatehoodOrder}",
-            "what do you know about {Abbreviation}",
-            "{StateName} information",
-            "{Capital} information",
-            "{StatehoodYear} information",
-            "{StatehoodOrder} information",
-            "{Abbreviation} information"
+            "{Number_Answer}"
           ]
-        },
+        },        
         {
           "name": "QuizIntent",
           "samples": [
