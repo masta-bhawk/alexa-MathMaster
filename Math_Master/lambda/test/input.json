@@ -1,0 +1,22 @@
+{
+    "session": {
+      "sessionId": "SessionId.Session1",
+      "application": {
+        "applicationId": "amzn1.ask.skill.742be964-9eca-4ed9-8454-5c90bcc7ad57"
+      },
+      "user": {
+        "userId": "arn:aws:iam::983662908997:user/debugUser"
+      },
+      "new": true
+    },
+    "request": {
+      "type": "IntentRequest",
+      "requestId": "EdwRequestId.TestSession1",
+      "timestamp": "2016-05-19T01:07:55Z",
+      "intent": {
+        "name": "MathQuizIntent"
+      },
+      "locale": "en-US"
+    },
+    "version": "1.0"
+  }
