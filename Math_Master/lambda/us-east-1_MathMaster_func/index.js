@@ -213,10 +213,10 @@ const MathQuizAnswerHandler = {
     var mathquestion = attributes.question;
     var answerGiven = handlerInput.requestEnvelope.request.intent.slots.Number_Answer.value;
     if (answerGiven == attributes.answer) {
-      speakOutput = 'Correct!';
+      speakOutput = getSpeechCon(true);
     }
     else {
-      speakOutput = 'Sorry - the correct answer was ' + attributes.answer.toString();
+      speakOutput = getSpeechCon(false) + 'The correct answer is ' + attributes.answer.toString();
     }
 
     return response.speak(speakOutput).getResponse();
@@ -450,14 +450,16 @@ const data = [
 const states = {
   START: `_START`,
   QUIZ: `_QUIZ`,
+  MATHQUIZ: `_MATHQUIZ`
 };
 
-const welcomeMessage = `Welcome to the United States Quiz Game!  You can ask me about any of the fifty states and their capitals, or you can ask me to start a quiz.  What would you like to do?`;
+//const welcomeMessage = `Welcome to the United States Quiz Game!  You can ask me about any of the fifty states and their capitals, or you can ask me to start a quiz.  What would you like to do?`;
+const welcomeMessage = `Welcome to Math Master.  I'll quiz you on some simple math problems.`;
 const startQuizMessage = `OK.  I will ask you 10 questions about the United States. `;
 const startMathQuizMessage = `OK.  I will ask you some math problems.  Let's go! `;
-const exitSkillMessage = `Thank you for playing the United States Quiz Game!  Let's play again soon!`;
-const repromptSpeech = `Which other state or capital would you like to know about?`;
-const helpMessage = `I know lots of things about the United States.  You can ask me about a state or a capital, and I'll tell you what I know.  You can also test your knowledge by asking me to start a quiz.  What would you like to do?`;
+const exitSkillMessage = `Thank you for playing Math Master!`;
+const repromptSpeech = `What, what what?`;
+const helpMessage = `I can ask you some math problems.  Just say how about a math problem.`;
 const useCardsFlag = true;
 
 /* HELPER FUNCTIONS */
@@ -673,10 +675,10 @@ function shuffle(array) {
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    QuizHandler,
+//    QuizHandler,
     MathQuizHandler,
-    DefinitionHandler,
-    QuizAnswerHandler,
+//    DefinitionHandler,
+//    QuizAnswerHandler,
     MathQuizAnswerHandler,
     RepeatHandler,
     HelpHandler,

@@ -12,7 +12,8 @@
         "question": "Problem number 1.  What is 172 plus 27?",
         "num1": 172,
         "counter": 1,
-        "num2": 27
+        "num2": 27,
+        "state": "_MATHQUIZ"
       },
       "user": {
         "userId": "arn:aws:iam::983662908997:user/debugUser"
